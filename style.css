@@ -8,11 +8,7 @@ body {
     background-color: #ffffff;
 }
 
-.title {
-    display: flex;
-}
-
-.title h2 {
+.header h2 {
     font-family: 'Playfair Display', serif;
     font-style: normal;
     font-weight: 900;
@@ -20,11 +16,10 @@ body {
     line-height: 47px;
     letter-spacing: 1px;
     margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
-.header-menu {
+.menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -36,7 +31,7 @@ body {
     margin-bottom: 47px;
 }
 
-.header-menu a {
+.menu a {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: 2px;
@@ -46,15 +41,21 @@ body {
     padding-right: 15px;
 }
 
-.header-menu li:last-child {
+.menu li:last-child {
     padding-right: 0;
 }
 
 .poster {
     min-height: 464px;
-    background-image: url("img/Hotel-11.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: url("img/Hotel-11.jpg") center center no-repeat;
+    -moz-background-size: cover;
+    /* Firefox до 4.0 */
+    -webkit-background-size: cover;
+    /* Safari и Chrome */
+    -o-background-size: cover;
+    /* Opera до версии 10.53 */
+    background-size: cover;
+    /* CSS3 */
     background-color: rgb(4, 10, 41);
 }
 
@@ -69,7 +70,7 @@ body {
 }
 
 .poster h1 {
-    font-size: 5em;
+    font-size: calc(25px + (72 - 25) * ((100vw - 300px) / (1440 - 300)));
     line-height: 84px;
     text-align: center;
     letter-spacing: 2px;
@@ -106,7 +107,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .review-item {
@@ -119,9 +120,12 @@ body {
     margin-right: 0;
 }
 
+.review-item img {
+    margin-bottom: 20px;
+}
+
 .review-item a {
     margin: 0;
-    margin-top: 20px;
     font-family: 'Playfair Display', serif;
     color: black;
     text-decoration: none;
@@ -238,3 +242,83 @@ body {
     background: url("news-portal/icons/ Arrow forward.svg") no-repeat center;
     background-size: 24px 25px;
 } */
+
+.footer {
+    background-color: #575757;
+    position: relative;
+    margin-top: 50px;
+}
+
+.footer h2 {
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 32px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 37px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer .menu a {
+    color: white;
+}
+
+.footer .menu::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 585px;
+    top: 160px;
+    right: 50%;
+    border: 1px solid #FFFFFF;
+}
+
+.footer .menu::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 585px;
+    top: 160px;
+    left: 50%;
+    border: 1px solid #FFFFFF;
+}
+
+.footer-social {
+    width: 176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 46px;
+    padding-top: 42px;
+}
+
+.social {
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+    margin-right: 14px;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+.social-inst {
+    background-image: url("icons/instagram_icon.svg");
+    background-position: center;
+}
+
+.social-fb {
+    background-image: url("icons/facebook_icon.svg");
+    background-position: center;
+}
+
+.social-tw {
+    background-image: url("icons/twitter_icon.svg");
+    background-position: center;
+}
