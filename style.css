@@ -16,6 +16,7 @@ body {
     line-height: 47px;
     letter-spacing: 1px;
     margin-top: 60px;
+    margin-bottom: 46px;
     text-align: center;
 }
 
@@ -169,21 +170,21 @@ body {
 
 .news-items {
     margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .news-item {
     position: relative;
     width: 370px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
 }
 
 .news-item::after {
     display: block;
     position: absolute;
     content: "";
-    top: 122px;
+    top: 107px;
     left: 135px;
     width: 100px;
     opacity: 0.4;
@@ -196,6 +197,7 @@ body {
 
 .news-item h4 {
     margin: 0;
+    margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
     font-style: normal;
     font-weight: 900;
@@ -205,6 +207,7 @@ body {
 }
 
 .news-item p {
+    margin-bottom: 24px;
     height: 63px;
     font-style: normal;
     font-weight: normal;
@@ -213,15 +216,18 @@ body {
     text-align: center;
 }
 
-.news input {
-    position: relative;
+.news-btn {
     margin: 0;
-    margin-left: 44%;
+    margin-bottom: 36px;
     padding-left: 30px;
     width: 170px;
     height: 47px;
     color: white;
     background-color: #FF7931;
+    background-image: url("icons/arrow_forward.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 25px;
+    background-position: 117px center;
     border: none;
     font-style: normal;
     font-weight: bold;
@@ -231,17 +237,6 @@ body {
     text-transform: uppercase;
     text-align: left;
 }
-
-
-/* .news button::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 10px;
-    left: 50px;
-    background: url("news-portal/icons/ Arrow forward.svg") no-repeat center;
-    background-size: 24px 25px;
-} */
 
 .footer {
     background-color: #575757;
